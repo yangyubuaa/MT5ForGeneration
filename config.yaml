@@ -1,0 +1,11 @@
+abs_path: /Users/yangyu/Desktop/判决生成/
+
+t5model_path: mt5_model/mt5-base
+
+dataset_path: data_preprocess/clear2.txt
+train_path: data_preprocess/train.txt
+test_path: data_preprocess/test.txt
+
+train_rate: 0.9
+
+use_cuda: True
