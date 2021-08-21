@@ -1,2 +1,4 @@
 mt5_model/mt5-base
 data_preprocess
+*.log
+*.pyc
