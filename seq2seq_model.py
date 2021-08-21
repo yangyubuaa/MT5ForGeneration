@@ -1,7 +1,7 @@
 import torch
 
 from mt5_model.transformers_pkg.models.t5 import T5ForConditionalGeneration
-from mt5_model.transformers_pkg.models.t5 import T5Tokenizer
+from mt5_model.transformers_pkg.models.t5.tokenization_t5 import T5Tokenizer
 
 
 class MT5ForJudgementGeneration(torch.nn.Module):
