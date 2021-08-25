@@ -44,7 +44,7 @@ def transfer_set2index(tokenizer, dataset):
     tokenized = list()
     for line in tqdm(dataset):
         query, value = line.split("|\t|")
-        query_tokenized, value_tokenized = tokenizer(query, return_tensors="pt", max_length=512, padding="max_length", truncation=True).input_ids, tokenizer(value, return_tensors="pt", max_length=30, padding="max_length", truncation=True).input_ids
+        query_tokenized, value_tokenized = tokenizer(query, return_tensors="pt", max_length=512, padding="max_length", truncation=True).input_ids, tokenizer(value, return_tensors="pt", max_length=100, padding="max_length", truncation=True).input_ids
         tokenized.append([query_tokenized, value_tokenized])
 
     return tokenized
