@@ -1,4 +1,4 @@
-abs_path: /home/yangyu/判决生成/
+abs_path: /Users/yangyu/Desktop/MT5ForGeneration/
 
 t5model_path: mt5_model/mt5-small-simplify
 
@@ -8,6 +8,9 @@ test_path: data_preprocess/test.txt
 
 train_tiny_path: data_preprocess/tiny/train.txt
 test_tiny_path: data_preprocess/tiny/test.txt
+
+cache_train_path: data_preprocess/train_cache.bin
+cache_test_path: data_preprocess/test_cache.bin
 
 train_rate: 0.9
 

@@ -83,6 +83,7 @@ def train(config):
             train_loss.backward()
             optimizer.step()
 
+
 if __name__=="__main__":
     with open(r'config.yaml', 'r', encoding='utf-8') as f:
         result = f.read()
