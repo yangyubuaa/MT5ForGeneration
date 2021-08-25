@@ -8,7 +8,7 @@ class MT5ForJudgementGeneration(torch.nn.Module):
     def __init__(self, config):
         super(MT5ForJudgementGeneration, self).__init__()
         self.config = config
-        self.mt5_model = T5ForConditionalGeneration.from_pretrained("mt5_model/mt5-base")
+        self.mt5_model = T5ForConditionalGeneration.from_pretrained("mt5_model/mt5-small-simplify")
 
     def forward(self, input_ids, labels):
         return self.mt5_model(input_ids=input_ids, labels=labels)

@@ -1,4 +1,4 @@
-mt5_model/mt5-base
+mt5_model/mt5-small-simplify
 data_preprocess
 *.log
 *.pyc

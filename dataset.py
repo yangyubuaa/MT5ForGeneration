@@ -22,8 +22,8 @@ def get_dataset(config):
     t5model_path = config["abs_path"] + config["t5model_path"]
     tokenizer = T5Tokenizer.from_pretrained(t5model_path)
 
-    train_set_path = config["abs_path"] + config["train_tiny_path"]
-    test_set_path = config["abs_path"] + config["test_tiny_path"]
+    train_set_path = config["abs_path"] + config["train_path"]
+    test_set_path = config["abs_path"] + config["test_path"]
 
     train_set = read_data_file(train_set_path)
     test_set = read_data_file(test_set_path)
@@ -44,7 +44,7 @@ def transfer_set2index(tokenizer, dataset):
     tokenized = list()
     for line in tqdm(dataset):
         query, value = line.split("|\t|")
-        query_tokenized, value_tokenized = tokenizer(query, return_tensors="pt", max_length=128, padding="max_length", truncation=True).input_ids, tokenizer(value, return_tensors="pt", max_length=128, padding="max_length", truncation=True).input_ids
+        query_tokenized, value_tokenized = tokenizer(query, return_tensors="pt", max_length=512, padding="max_length", truncation=True).input_ids, tokenizer(value, return_tensors="pt", max_length=30, padding="max_length", truncation=True).input_ids
         tokenized.append([query_tokenized, value_tokenized])
 
     return tokenized

@@ -1,6 +1,6 @@
 abs_path: /home/yangyu/判决生成/
 
-t5model_path: mt5_model/mt5-base
+t5model_path: mt5_model/mt5-small-simplify
 
 dataset_path: data_preprocess/clear2.txt
 train_path: data_preprocess/train.txt
@@ -13,6 +13,6 @@ train_rate: 0.9
 
 use_cuda: True
 
-batch_size: 1
-LR: 0.0002
-EPOCH: 10
+batch_size: 32
+LR: 0.002
+EPOCH: 100
